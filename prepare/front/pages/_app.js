@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "antd/dist/antd.css";
 import Head from 'next/head';
+import wrapper from "../store/configureStore";
 
 // 모든 페이지에 공통인것들은 _app.js에 넣으면된다.
 
@@ -21,4 +22,4 @@ NodeBird.prototype = {
     Component: PropTypes.elementType.isRequired,
 }
 
-export default NodeBird;
+export default wrapper.withRedux(NodeBird);

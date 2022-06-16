@@ -58,7 +58,7 @@ const Signup = () => {
                 <div>
                     <label htmlFor="user-password">비밀번호</label>
                     <br />
-                    <Input name="user-password" value={password} required onChange={onChangepassword} />
+                    <Input name="user-password" type="password" value={password} required onChange={onChangepassword} />
                 </div>
                 <div>
                     <label htmlFor="user-password-check">비밀번호체크</label>
