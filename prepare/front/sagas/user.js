@@ -7,18 +7,18 @@ function logOutAPI() {
 
 
 
-function* logOut() {
+function* logOut(action) {
     try {
         yield delay(1000);
         // const result = yield call(logOutAPI);
         yield put({
             type: 'LOG_OUT_SUCCESS',
-            data: result.data,
+            data: action.data,
         }); // 요청성공
     } catch (err) {
         yield put({
             type: 'LOG_OUT_FAILURE',
-            // data: err.response.data,
+            data: err.response.data,
         })// 요청실패
     }
 }
@@ -37,12 +37,12 @@ function* logIn(action) {
         // const result = yield call(logInAPI, action.data);
         yield put({
             type: 'LOG_IN_SUCCESS',
-            // data: result.data,
+            data: action.data,
         }); // 요청성공
     } catch (err) {
         yield put({
             type: 'LOG_IN_FAILURE',
-            // data: err.response.data,
+            data: err.response.data,
         })// 요청실패
     }
 }
